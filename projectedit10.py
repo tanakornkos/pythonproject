@@ -207,7 +207,7 @@ class Ui_MainWindow(object):
         
         self.storage[self.ondate]=income-outcome
         
-        print(str(self.ondatesplit[1]))
+        
         self.progressBar_3.setValue(int(self.ondatesplit[1]))
     
         for k,v in self.storage.items():
@@ -222,7 +222,7 @@ class Ui_MainWindow(object):
         
         if self.totalvalue >=0:
             moneyperday =((100-int(self.savingper))*int(self.totalvalue)/(100*((31-int(self.ondatesplit[1])))))
-            print(str(moneyperday))
+            
             self.howmuch_label.setText(str(round(moneyperday,2)))
     
         
@@ -233,11 +233,11 @@ class Ui_MainWindow(object):
             self.totalmoney.setText(str(0))
 
         else:
-            print('testbefore')
+            
             self.totalthatday = self.storage.get(self.getdate)
-            print(self.totalthatday)
+            
             self.totalmoney.setText(str(self.totalthatday))
-            print('test2')
+            
 
 #set go to next page
     def gohome(self):
